@@ -143,14 +143,20 @@ exports.deleteUser = (req, res) => {
     });
 };
 
-//GET USERS COUNT STORED IN THE DATABASE
-exports.howManyUsers = async (req, res) => {
-  const userCount = await User.countDocuments((count) => count);
+//GET USERS COUNT STORED IN THE DATABASE 
+exports.getUserCount = async (req, res) => {
+  try {
+    const userCount = await User.countDocuments((count) => count);
 
-  if (!userCount) {
-    res.status(500).json({ success: false });
+    if (!userCount) {
+      res.status(500).json({ success: false });
+    }
+    res.status(200).json({
+      userCount: userCount
+    });
+  } catch (error) {
+    res.status(500).json({
+      message: "Internal server error, could not count users."
+    });
   }
-  res.send({
-    userCount: userCount,
-  });
 };
