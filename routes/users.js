@@ -37,6 +37,8 @@ const usersController = require("../controllers/users");
  * /users:
  *   get:
  *     summary: Get all users
+ *     tags: 
+ *        - Users
  *     description: Retrieve a list of all users.
  *     responses:
  *       200:
@@ -59,6 +61,8 @@ router.get(`/`, usersController.getAllUsers);
  * /users/{id}:
  *   get:
  *     summary: Get a specific user
+ *     tags: 
+ *        - Users
  *     description: Retrieve a specific user by ID.
  *     parameters:
  *       - in: path
@@ -86,6 +90,8 @@ router.get("/:id", usersController.getUser);
  * /users:
  *   post:
  *     summary: Add a new user
+ *     tags: 
+ *        - Users
  *     description: Create a new user.
  *     requestBody:
  *       required: true
@@ -112,6 +118,8 @@ router.post("/", usersController.addUser);
  * /users:
  *   put:
  *     summary: Update an existing user
+ *     tags: 
+ *        - Users
  *     description: Update an existing user by ID.
  *     parameters:
  *       - in: path
@@ -145,6 +153,8 @@ router.put("/:id", usersController.updateUser);
  * /users/login:
  *   post:
  *     summary: User login
+ *     tags: 
+ *        - Users
  *     description: Authenticate a user and generate a token.
  *     requestBody:
  *       required: true
@@ -182,6 +192,8 @@ router.post("/login", usersController.login);
  * /users/register:
  *   post:
  *     summary: Registers a new user
+ *     tags: 
+ *        - Users
  *     description: Registers a new user with their name, email, password, phone, and address details
  *     requestBody:
  *       required: true
@@ -271,6 +283,8 @@ router.post("/register", usersController.signUp);
  * /users/{id}:
  *   delete:
  *     summary: Deletes a user by ID
+ *     tags: 
+ *        - Users
  *     description: Deletes an existing user by their ID
  *     parameters:
  *       - in: path
@@ -333,6 +347,8 @@ router.delete("/:id", usersController.deleteUser);
  * /users/getUserCount:
  *   get:
  *     summary: Retrieves the number of users in the database
+ *     tags: 
+ *        - Users
  *     description: Retrieves the number of users currently stored in the database
  *     responses:
  *       '200':
