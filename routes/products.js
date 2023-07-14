@@ -27,6 +27,67 @@ const storage = multer.diskStorage({
 })
 const uploadOptions = multer({ storage: storage })
 
+/**
+ * @swagger
+ * components:
+ *   schemas:
+ *     Product:
+ *       type: object
+ *       properties:
+ *         name:
+ *           type: string
+ *         description:
+ *           type: string
+ *         image:
+ *           type: string
+ *         images:
+ *           type: array
+ *           items:
+ *             type: string
+ *         brand:
+ *           type: string
+ *         price:
+ *           type: number
+ *           format: float
+ *         category:
+ *           type: string
+ *           description: The ID of the category that the product belongs to.
+ *         countInStock:
+ *           type: integer
+ *         rating:
+ *           type: number
+ *           format: float
+ *         numReviews:
+ *           type: integer
+ *         isFeatured:
+ *           type: boolean
+ *         dateCreated:
+ *           type: string
+ *           format: date-time
+ *         id:
+ *           type: string
+ */
+
+/**
+ * @swagger
+ * /products:
+ *   get:
+ *     summary: Get all products
+ *     tags: 
+ *        - Products
+ *     description: Retrieve a list of all products.
+ *     responses:
+ *       200:
+ *         description: A list of products.
+ *         content:
+ *           application/json:
+ *             schema:
+ *               type: array
+ *               items:
+ *                 $ref: '#/components/schemas/Product'
+ *       500:
+ *         description: Internal server error.
+ */
 //GET ALL PRODUCTS
 router.get(`/`, productsController.getAllProducts);
 

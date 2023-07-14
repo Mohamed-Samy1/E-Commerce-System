@@ -26,7 +26,7 @@ const ordersRoutes = require('./routes/orders');
 
 //Routes Use
 app.use('/categories', categoriesRoutes);
-app.use('products', productsRoutes);
+app.use('/products', productsRoutes);
 app.use('/users', usersRoutes);
 app.use('/orders', ordersRoutes);
 
