@@ -25,6 +25,10 @@ const swaggerOptions = {
         name: 'Products',
         description: 'Endpoints related to Products',
       },
+      {
+        name: 'Orders',
+        description: 'Endpoints related to Orders',
+      }
     ],
   },
   apis: ['./routes/*.js'],
