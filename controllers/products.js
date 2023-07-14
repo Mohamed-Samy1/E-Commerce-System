@@ -145,7 +145,7 @@ exports.deleteProduct = async (req, res) => {
 };
 
 //GET THE COUNT OF PRODUCTS
-exports.howManyProducts = async (req, res) => {
+exports.getProductsCount = async (req, res) => {
   try {
     const productCount = await Product.countDocuments();
 
