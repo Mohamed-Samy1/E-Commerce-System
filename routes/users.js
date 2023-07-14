@@ -344,7 +344,7 @@ router.delete("/:id", usersController.deleteUser);
 
 /**
  * @swagger
- * /users/getUserCount:
+ * /users/get/count:
  *   get:
  *     summary: Retrieves the number of users in the database
  *     tags: 
@@ -374,7 +374,7 @@ router.delete("/:id", usersController.deleteUser);
  *                   description: Indicates whether the count was successful
  *                   example: false
  */
-//GET USERS COUNT STORED IN THE DATABASE  (Error)
-router.get('/getUserCount', usersController.getUserCount);
+//GET USERS COUNT STORED IN THE DATABASE
+router.get('/get/count', usersController.getUserCount);
 
 module.exports = router;
