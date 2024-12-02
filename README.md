@@ -13,6 +13,7 @@ Welcome to the **E-commerce API Backend System**! This project is a RESTful API 
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
+- [API Documentation](#api-documentation)
 
 ---
 
@@ -128,6 +129,17 @@ ecommerce-api/
 ├── package.json       # Project dependencies and scripts
 ├── README.md          # Project documentation
 └── app.js             # Entry point for the application
+```
 
+---
 
+## API Documentation
 
+This project includes complete API documentation created using **Swagger.js**.  
+To access the documentation, visit the following link:  
+
+**[https://e-commerce-api-ac78.onrender.com/docs/](https://e-commerce-api-ac78.onrender.com/docs/)**  
+
+Below is a preview of the documentation:  
+
+![Swagger Documentation Preview](/assets/swaggerDoc.png)
