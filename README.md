@@ -13,8 +13,6 @@ Welcome to the **E-commerce API Backend System**! This project is a RESTful API 
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
