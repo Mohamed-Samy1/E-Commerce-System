@@ -78,7 +78,7 @@ Ensure you have the following installed on your machine:
 
 ### Configuration
 
-- **Create a .env file with the following variables:**:
+**Create a .env file with the following variables:**:
 -  PORT=5000
 -  MONGO_URI=mongodb://localhost:27017/yourDatabaseURI
 -  JWT_SECRET=your_jwt_secret
@@ -87,18 +87,47 @@ Ensure you have the following installed on your machine:
 
 ---
 
-### Project Structure
-e-commerce-system/
+# Project Structure
+
+```plaintext
+ecommerce-api/
 │
-├── controllers/       # Route handlers
-├── models/            # Mongoose models for MongoDB
+├── controllers/       # Route handlers for business logic
+│   ├── users.js       # Handles user-related operations
+│   ├── products.js    # Manages product-related operations
+│   ├── orders.js      # Handles order-related operations
+│   └── categories.js  # Manages category-related operations
+│
 ├── routes/            # API route definitions
-├── public/            # Public access photos
-├── assets/           
+│   ├── users.js       # Routes for user operations
+│   ├── products.js    # Routes for product operations
+│   ├── orders.js      # Routes for order operations
+│   └── categories.js  # Routes for category operations
+│
+├── models/            # Mongoose models for MongoDB
+│   ├── User.js        # User schema
+│   ├── Product.js     # Product schema
+│   ├── Order.js       # Order schema
+│   └── Category.js    # Category schema
+│
 ├── utils/             # Utility functions
+│   ├── jwt.js         # Helper for generating and verifying JWT tokens
+│   ├── error-handling.js # Utility for centralized error handling
+│   └── swagger.js     # Helper for setting up Swagger documentation
+│
+├── assets/            # Static assets like images or media files
+│   └── sample.jpg     # Example image file
+│
+├── public/            # Publicly accessible files like HTML, CSS, and JS
+│   ├── index.html     # Example HTML file
+│   ├── styles.css     # Example CSS file
+│   └── script.js      # Example JavaScript file
+│
 ├── .env               # Environment variables
 ├── .gitignore         # Files to ignore in Git
 ├── package.json       # Project dependencies and scripts
-└── README.md          # Project documentation
+├── README.md          # Project documentation
+└── app.js             # Entry point for the application
+
 
 
